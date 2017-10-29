@@ -1,7 +1,7 @@
 #!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-apt-get update
+sudo locale-gen zh_CN.UTF-8
 export LANG=zh_CN.UTF-8
 apt-get update
 apt-get install -y xfce4 xfce4-goodies 
