@@ -24,6 +24,7 @@ chmod +x /root/.vnc/xstartup /.vnc/vnc.sh
 
 sed -i "s/22/220/g" /etc/ssh/sshd_config
 service ssh restart
+cd /root
 git clone https://github.com/shadowsocksr-rm/shadowsocksr.git
 cd shadowsocksr
 sh initcfg.sh
@@ -32,7 +33,7 @@ wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/user-config.
 
 git clone https://github.com/novnc/noVNC.git /noVNC
 ln -s /noVNC/vnc.html /noVNC/index.html
-
+cd /root
 touch /etc/supervisor/conf.d/novnc.conf
 touch /etc/supervisor/conf.d/ssr.conf
 touch /etc/supervisor/conf.d/vnc.conf
