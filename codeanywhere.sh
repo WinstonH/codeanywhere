@@ -19,6 +19,7 @@ mkdir /root/.vnc
 cd /root/.vnc
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/xstartup
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/passwd
+wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/vnc.sh
 chmod 600 /root/.vnc/passwd
 chmod +x /root/.vnc/xstartup /.vnc/vnc.sh
 
