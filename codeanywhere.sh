@@ -21,7 +21,8 @@ wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/xstartup
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/passwd
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/vnc.sh
 chmod 600 /root/.vnc/passwd
-chmod +x /root/.vnc/xstartup /.vnc/vnc.sh
+chmod +x /root/.vnc/xstartup
+chmod +x /root/.vnc/vnc.sh
 
 sed -i "s/22/220/g" /etc/ssh/sshd_config
 service ssh restart
@@ -50,7 +51,8 @@ user=root
 autorestart=true
 priority=200" >> /etc/supervisor/conf.d/ssr.conf
 echo "[program:vnc]
-command=/root/.vnc/vnc.sh
+command=sh /root/.vnc/vnc.sh
+directory=/root
 user=root
 autorestart=true
 priority=200" >> /etc/supervisor/conf.d/vnc.conf
