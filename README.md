@@ -1,6 +1,6 @@
 # codeanywhere
 
-git clone https://github.com/WinstonH/codeanywhere.git && codeanywhere/codeanywhere.sh 
+git clone -b lxde https://github.com/WinstonH/codeanywhere.git && codeanywhere/codeanywhere.sh 
 
 codeanywhere的免费容器container，提供了所有http和websocket端口，不提供tcp端口，但有一个“漏洞”，它提供了ssh远程连接，也就是对外映射了22/tcp。
 
@@ -8,7 +8,7 @@ codeanywhere的免费容器container，提供了所有http和websocket端口，�
 
 - 自动替换ssh端口22→220，原22端口用ssr代替，且做了redirect转发，以防止codeanywhere的UI界面无法连接终端。需要修改ssr参数的，fork后修改user-config.json文件即可
 
-- 在容器机器内搭建了xfce中文桌面环境+vnc服务端
+- 在容器机器内搭建了lxde中文桌面环境+vnc服务端
 
 - 使用novnc连接vnc桌面，内部端口为3000，即codeanywhere提供的https接口
 
