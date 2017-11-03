@@ -5,8 +5,8 @@ do
   if [ $? -ne 0 ]
   then
   echo "start vnc ..."
-  rm /tmp/.X1-lock
-  rm /tmp/.X11-unix/X1
+  export HOME=/root
+  export USER=root
   /usr/bin/vncserver :1 -geometry 1280x800 -depth 24
   else
   echo "vnc is running"
