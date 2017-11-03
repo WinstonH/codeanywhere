@@ -10,5 +10,6 @@ unset DBUS_SESSION_BUS_ADDRESS
 xsetroot -solid grey
 vncconfig -iconic &
 
-startxfce4 &
+lxterminal &
+/usr/bin/lxsession -s LXDE &
 autocutsel -s PRIMARY -fork &
