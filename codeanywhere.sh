@@ -4,7 +4,7 @@ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 sudo locale-gen zh_CN.UTF-8
 export LANG=zh_CN.UTF-8
 apt-get update
-apt-get install -y fluxbox
+apt-get install -y fluxbox xterm
 apt-get install -y supervisor python ttf-wqy-microhei autocutsel
 apt-get install -y tightvncserver 
 apt-get clean
