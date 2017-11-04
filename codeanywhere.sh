@@ -15,6 +15,9 @@ apt-get update
 apt-get install google-chrome-stable firefox-locale-zh-hans firefox -y
 apt-get clean
 
+wget https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer-64-bit.deb
+dpkg -i lantern-*.deb
+
 mkdir /root/.vnc
 cd /root/.vnc
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/lxde/xstartup
