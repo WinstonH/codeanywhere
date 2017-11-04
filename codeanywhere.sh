@@ -4,20 +4,20 @@ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 sudo locale-gen zh_CN.UTF-8
 export LANG=zh_CN.UTF-8
 apt-get update
-apt-get install -y xorg lxde-core 
+apt-get install -y fluxbox
 apt-get install -y supervisor python ttf-wqy-microhei autocutsel
 apt-get install -y tightvncserver 
 apt-get clean
 
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-apt-get update
-apt-get install google-chrome-stable firefox-locale-zh-hans firefox -y
+
+apt-get install qupzilla firefox-locale-zh-hans firefox -y
 apt-get clean
+wget https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer-64-bit.deb
+dpkg -i lantern-*.deb
 
 mkdir /root/.vnc
 cd /root/.vnc
-wget https://raw.githubusercontent.com/WinstonH/codeanywhere/lxde/xstartup
+wget https://raw.githubusercontent.com/WinstonH/codeanywhere/fluxbox/xstartup
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/passwd
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/master/vnc.sh
 chmod 600 /root/.vnc/passwd
