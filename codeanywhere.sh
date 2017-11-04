@@ -9,9 +9,12 @@ apt-get install -y supervisor python ttf-wqy-microhei autocutsel
 apt-get install -y tightvncserver 
 apt-get clean
 
-
-apt-get install qupzilla firefox-locale-zh-hans firefox -y
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+apt-get update
+apt-get install google-chrome-stable firefox-locale-zh-hans firefox qupzilla -y
 apt-get clean
+
 wget https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer-64-bit.deb
 dpkg -i lantern-*.deb
 
