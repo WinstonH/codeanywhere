@@ -15,6 +15,7 @@ apt-get update
 apt-get install google-chrome-stable firefox-locale-zh-hans firefox midori lxterminal xdotool -y
 apt-get clean
 
+wget https://raw.githubusercontent.com/WinstonH/codeanywhere/lxde/key.sh
 wget https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer-64-bit.deb
 dpkg -i lantern-*.deb
 
