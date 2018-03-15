@@ -19,6 +19,18 @@ wget https://raw.githubusercontent.com/WinstonH/codeanywhere/lxde/key.sh
 wget https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer-64-bit.deb
 dpkg -i lantern-*.deb
 
+#install v2ray
+cd /usr/bin
+wget https://storage.googleapis.com/v2ray-docker/v2ray
+wget https://storage.googleapis.com/v2ray-docker/v2ctl
+wget https://storage.googleapis.com/v2ray-docker/geoip.dat
+wget https://storage.googleapis.com/v2ray-docker/geosite.dat
+chmod +x /usr/bin/v2ray /usr/bin/v2ctl
+mkdir /etc/v2ray
+cd /etc/v2ray
+wget https://raw.githubusercontent.com/WinstonH/codeanywhere/lxde/config.json
+#end v2ray installation
+
 mkdir /root/.vnc
 cd /root/.vnc
 wget https://raw.githubusercontent.com/WinstonH/codeanywhere/lxde/xstartup
