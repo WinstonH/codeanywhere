@@ -20,16 +20,7 @@ wget https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lanter
 dpkg -i lantern-*.deb
 
 #install v2ray
-cd /usr/bin
-wget https://storage.googleapis.com/v2ray-docker/v2ray
-wget https://storage.googleapis.com/v2ray-docker/v2ctl
-wget https://storage.googleapis.com/v2ray-docker/geoip.dat
-wget https://storage.googleapis.com/v2ray-docker/geosite.dat
-chmod +x /usr/bin/v2ray /usr/bin/v2ctl
-mkdir /etc/v2ray
-cd /etc/v2ray
-wget https://raw.githubusercontent.com/WinstonH/codeanywhere/lxde/config.json
-#end v2ray installation
+bash <(curl -L -s https://install.direct/go.sh)
 
 mkdir /root/.vnc
 cd /root/.vnc
