@@ -7,7 +7,7 @@ do
   echo "start vnc ..."
   export HOME=/root
   export USER=root
-  /usr/bin/vncserver :1 -geometry 1280x800 -depth 24
+  /usr/bin/vncserver :1 -geometry 1366x768 -depth 24
   else
   echo "vnc is running"
   fi
